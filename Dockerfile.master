@@ -9,7 +9,6 @@ RUN yum install -y sudo curl openssl && \
     yum install -y salt-master salt-minion salt-ssh && \
     yum clean all && \
     rm -rf /var/cache/yum && \
-    sed -i "s|#auto_accept: False|auto_accept: True|g" /etc/salt/master && \
-    systemctl enable --now salt-master && systemctl enable --now salt-minion
+    sed -i "s|#auto_accept: False|auto_accept: True|g" /etc/salt/master
 
 ENTRYPOINT ["salt-master", "-l", "debug"]

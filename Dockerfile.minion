@@ -9,7 +9,6 @@ RUN yum install -y sudo curl openssl && \
     yum install -y salt-minion salt-ssh && \
     yum clean all && \
     rm -rf /var/cache/yum && \
-    sed -i "s|#master: salt|master: salt-master|g" /etc/salt/minion && \
-    systemctl enable --now salt-minion
+    sed -i "s|#master: salt|master: salt-master|g" /etc/salt/minion
 
 ENTRYPOINT ["salt-minion", "-l", "debug"]
