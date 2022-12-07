@@ -1,6 +1,7 @@
 FROM centos:7 as salt-master
 
-LABEL env="dev"
+LABEL mantainer="alexmbarbosa"
+LABEL environment="dev"
 
 RUN yum install -y sudo curl openssl && \
     rpm --import https://repo.saltproject.io/py3/redhat/7/x86_64/3004/SALTSTACK-GPG-KEY.pub && \
@@ -10,5 +11,9 @@ RUN yum install -y sudo curl openssl && \
     yum clean all && \
     rm -rf /var/cache/yum && \
     sed -i "s|#auto_accept: False|auto_accept: True|g" /etc/salt/master
+
+WORKDIR /srv
+
+VOLUME ./files:/srv/salt
 
 ENTRYPOINT ["salt-master", "-l", "debug"]

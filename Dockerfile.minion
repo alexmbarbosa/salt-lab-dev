@@ -1,6 +1,7 @@
 FROM centos:7 as salt-minion
 
-LABEL env="dev"
+LABEL mantainer="alexmbarbosa"
+LABEL environment="dev"
 
 RUN yum install -y sudo curl openssl && \
     rpm --import https://repo.saltproject.io/py3/redhat/7/x86_64/3004/SALTSTACK-GPG-KEY.pub && \
