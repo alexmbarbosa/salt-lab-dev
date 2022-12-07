@@ -5,9 +5,15 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.master
+    networks:
+      - salt-network
   salt-minion:
     build:
       context: .
       dockerfile: Dockerfile.minion
+    networks:
+      - salt-network
     depends_on:
       - salt-master
+networks:
+  salt-network: {}
