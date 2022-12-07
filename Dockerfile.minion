@@ -1,11 +1,6 @@
 FROM centos:7
 
-# RUN yum install -y --nogpgcheck epel-release && \
-#     yum install -y --nogpgcheck https://repo.saltstack.com/yum/redhat/salt-repo-latest-2.el7.noarch.rpm && \
-#     yum update -y && \
-#     yum install -y virt-what salt-minion nano tree vim-full net-tools git && \
-#     yum clean all && \
-#     rm -rf /var/cache/yum
+LABEL env="dev"
 
 RUN yum install -y sudo curl openssl && \
     rpm --import https://repo.saltproject.io/py3/redhat/7/x86_64/3004/SALTSTACK-GPG-KEY.pub && \
