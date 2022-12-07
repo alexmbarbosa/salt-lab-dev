@@ -2,9 +2,6 @@
 This salt lab has adapted to be used in docker containers *(based on Centos7 images)*
 
 First, I share the credits of the project that served as the basis for this repository:
-
-[SaltStack-CentOS-Docker (dehvCurtis)](https://github.com/dehvCurtis/SaltStack-CentOS-Docker)
-
 ## Docker Structure Overview:
 
 ---
@@ -39,6 +36,10 @@ docker-compose exec salt-master bash
 ```
 
 ---
+**Due Credits to:**
+
+* [simplest-way-to-learn-saltstack](https://timlwhite.medium.com/the-simplest-way-to-learn-saltstack-cd9f5edbc967)
+
 **References:**
 
 * https://repo.saltproject.io/#rhel

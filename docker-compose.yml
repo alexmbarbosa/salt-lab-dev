@@ -1,13 +1,15 @@
-version: '3.7'
+version: '3.9'
 
 services: 
   salt-master:
+    hostname: salt-master
     build:
       context: .
       dockerfile: Dockerfile.master
     networks:
       - salt-network
   salt-minion:
+    hostname: salt-minion
     build:
       context: .
       dockerfile: Dockerfile.minion
