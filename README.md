@@ -1,7 +1,6 @@
 # WIP salt-lab-dev
-This salt lab has adapted to be used in docker containers *(based on Centos7 images)*
+This salt lab has adapted to be used in docker containers *(based on Centos7 images)*.
 
-First, I share the credits of the project that served as the basis for this repository:
 ## Docker Structure Overview:
 
 ---

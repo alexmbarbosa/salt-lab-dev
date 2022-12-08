@@ -10,10 +10,11 @@ RUN yum install -y sudo curl openssl && \
     yum install -y salt-master salt-minion salt-ssh && \
     yum clean all && \
     rm -rf /var/cache/yum && \
-    sed -i "s|#auto_accept: False|auto_accept: True|g" /etc/salt/master
+    sed -i "s|#auto_accept: False|auto_accept: True|g" /etc/salt/master && \
+    mkdir -p /srv/salt/{states,pillars}
 
 WORKDIR /srv
 
-COPY ./files/etc /etc/salt/master.d
+COPY ./files/etc/conf /etc/salt/master.d
 
 ENTRYPOINT ["salt-master", "-l", "debug"]
