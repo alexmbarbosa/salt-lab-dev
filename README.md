@@ -1,7 +1,39 @@
-# WIP salt-lab-dev
+# salt-lab-dev
 This salt lab has adapted to be used in docker containers *(based on Centos7 images)*.
 
-## Docker Structure Overview:
+## How to use:
+1. Clone this repository:
+  ```bash
+git clone https://github.com/alexmbarbosa/salt-lab-dev.git
+  ```
+2. Go to the project root folder:
+```bash
+cd ./salt-lab-dev/
+```
+3. Build/Start/Run this Project:
+```bash
+make start
+```
+4. Stop this Project execution:
+```bash
+make stop
+```
+**Additional options:**
+  * Build Docker Project:
+  ```bash
+  make build
+  ```
+  * Exec docker salt-master:
+  ```bash
+  make run-master
+  ```
+  * Exec docker salt-minions:
+  ```bash
+  make run-minion-1
+  make run-minion-2
+  ``` 
+ 
+ ## Docker Structure Overview:
 
 ---
 
@@ -18,6 +50,10 @@ This salt lab has adapted to be used in docker containers *(based on Centos7 ima
   Salt orchestration.
 
 ### Salt Structure:
+* Salt states and pillars are bound by docker-compose volume using this source:
+
+  - **files/etc/salt/**
+
 * State/Pillar Folders in salt-master:
   
   * `/srv/salt/states`

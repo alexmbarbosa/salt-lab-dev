@@ -11,8 +11,18 @@ services:
     volumes:
       - ./files/etc/salt:/srv/salt:rw
     restart: always
-  salt-minion:
-    hostname: salt-minion
+  salt-minion-1:
+    hostname: salt-minion-1
+    build:
+      context: .
+      dockerfile: Dockerfile.minion
+    networks:
+      - salt-network
+    depends_on:
+      - salt-master
+    restart: always
+  salt-minion-2:
+    hostname: salt-minion-2
     build:
       context: .
       dockerfile: Dockerfile.minion
