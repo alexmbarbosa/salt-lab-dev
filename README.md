@@ -1,5 +1,5 @@
 # salt-lab-dev
-This salt lab has adapted to be used in docker containers *(based on [**Centos7**](https://hub.docker.com/_/centos) image)*.
+This [**salt**](https://docs.saltproject.io/en/getstarted/) lab has adapted to be used in docker containers *(based on [**Centos7**](https://hub.docker.com/_/centos) image)*.
 
 This is a helpful way to practice/test salt concepts as a sysadmin or developer. Keep in mind this Project should be used *only as a development environment*.
 
