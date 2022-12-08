@@ -59,23 +59,6 @@ make stop
   * `/srv/salt/states`
   * `/srv/salt/pillars`
 
-## Getting started Salt Docker Env
-
----
-
-1. Build/Start docker lab env using docker-compose:
-Go to salt-lab-dev and execute:
-```sh
-docker-compose up -d
-```
-If everything is ok, we will have a container with salt-master and another one with salt-minion.
-
-2. Login to the salt-master and test minion communication:
-
-```sh
-docker-compose exec salt-master bash
-```
-
 ---
 **Due Credits to:**
 
