@@ -1,5 +1,5 @@
 # salt-lab-dev
-This salt lab has adapted to be used in docker containers *(based on Centos7 images)*.
+This salt lab has adapted to be used in docker containers *(based on [**Centos7**](https://hub.docker.com/_/centos) images)*.
 
 ## How to use:
 1. Clone this repository:
