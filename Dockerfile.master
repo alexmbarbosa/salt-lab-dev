@@ -14,6 +14,6 @@ RUN yum install -y sudo curl openssl && \
 
 WORKDIR /srv
 
-VOLUME ./files:/srv/salt
+COPY ./files/etc /etc/salt/master.d
 
 ENTRYPOINT ["salt-master", "-l", "debug"]

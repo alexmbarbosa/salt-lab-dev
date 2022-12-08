@@ -8,6 +8,8 @@ services:
       dockerfile: Dockerfile.master
     networks:
       - salt-network
+    volumes:
+      - ./files/etc/salt:/srv/salt:rw
     restart: always
   salt-minion:
     hostname: salt-minion

@@ -18,6 +18,12 @@ First, I share the credits of the project that served as the basis for this repo
 
   Salt orchestration.
 
+### Salt Structure:
+* State/Pillar Folders in salt-master:
+  
+  * `/srv/salt/states`
+  * `/srv/salt/pillars`
+
 ## Getting started Salt Docker Env
 
 ---
