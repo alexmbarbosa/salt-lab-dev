@@ -62,12 +62,10 @@ make stop
   * `/srv/salt/pillars`
 
 ---
-**Due Credits to:**
-
-* [simplest-way-to-learn-saltstack](https://timlwhite.medium.com/the-simplest-way-to-learn-saltstack-cd9f5edbc967)
 
 **References:**
 
+* https://timlwhite.medium.com/the-simplest-way-to-learn-saltstack
 * https://repo.saltproject.io/#rhel
 * https://docs.saltproject.io/en/latest/ref/configuration/index.html
 * https://docs.saltproject.io/salt/install-guide/en/latest/
